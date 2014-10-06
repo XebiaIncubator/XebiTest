@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="AppiumAndroidiOS" default="" basedir=".">
+
+	<property name="sourceDir" location="src" />
+	<property name="buildDir" location="bin" />
+	<property name="libDir" location="lib" />
+	<property name="config" location="config" />
+	<property name="outputDir" location="testsuite-output" />
+	<property name="testSuiteLocation" location="testSuite" />
+
+	<!-- @purpose: declare a property set to be sent to Java Code via testng task -->
+	<propertyset id="propset1">
+		<propertyref name="browser"/>
+	</propertyset>
+	
+	<!-- setting up the master Classpath -->
+	<path id="master-classpath">
+		<fileset dir="${libDir}">
+			<include name="*.jar"></include>
+			<include name="**/*.jar"></include>
+		</fileset>
+		<pathelement path="${buildDir}"></pathelement>
+		<dirset dir="${config}"/>
+	</path>
+	
+	<path id="properties">
+		<dirset dir="src"/>
+	</path>
+	
+	<!-- @ Purpose: set browser value for iOS  -->
+	<target name="set-browser-iOS">
+		<property name="browser" value="iOS"/>
+	</target>
+	
+	<!-- @ Purpose: set browser value for android  -->
+	<target name="set-browser-android">
+		<property name="browser" value="android"/>
+	</target>
+	
+	<target name="clean" description="Remove build and output directories">
+		<delete dir="${buildDir}" />
+		<delete dir="${outputDir}" />	
+		<delete dir="${logsDir}" />		
+	</target>
+	
+	<target name="build" description="Creates a build of the test suite.">
+		<echo>"Making directory ${buildDir}"</echo> 
+		<mkdir dir="${buildDir}" />
+		<echo>"Making directory ${outputDir}"</echo> 
+		<mkdir dir="${outputDir}" />
+		<echo>"Making directory ${ScreenShotDir}"</echo> 
+		<mkdir dir="${outputDir}/ScreenShot" />
+		<echo>"Doing build..."</echo> 
+		
+		<javac srcdir="${sourceDir}" destdir="${buildDir}" classpathref="master-classpath" debug="true" deprecation="false" failonerror="true" fork="false" includeantruntime="false"/>
+	</target>
+	
+	
+	<taskdef resource="testngtasks" classpath="${libDir}/testng-6.8.jar" />
+	<!--<taskdef resource="testngtasks" classpath="${libDir}/testng-5.9-jdk15.jar" />-->
+	
+	<target name="do-test-iOS" description="Execute TestNG tests">
+		<testng classpathref="master-classpath" workingDir="${buildDir}" outputdir="${outputDir}" suitename="jabong-test-suite-iOS" >	
+			<!-- refer the property set to java code to pass the value of browser property-->
+			<propertyset refid="propset1"/>
+			<xmlfileset dir="${testSuiteLocation}" includes="iOS-testSuite.xml" /> 		
+		</testng>
+	</target>
+	
+	<target name="do-test-android" description="Execute TestNG tests">
+		<testng classpathref="master-classpath" workingDir="${buildDir}" outputdir="${outputDir}" suitename="jabong-test-suite-android" >	
+			<!-- refer the property set to java code to pass the value of browser property-->
+			<propertyset refid="propset1"/>
+			<xmlfileset dir="${testSuiteLocation}" includes="android-testSuite.xml" /> 		
+		</testng>
+	</target>
+	
+	<target name="run-test-iOS" depends="clean,build,set-browser-iOS,do-test-iOS"></target>
+	
+	<target name="run-test-android" depends="clean,build,set-browser-android,do-test-android"></target>
+	
+	
+
+
+
+</project>
+

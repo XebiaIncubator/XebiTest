@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestSuite-android" duration-ms="106424" started-at="2014-10-06T19:31:21Z" finished-at="2014-10-06T19:33:07Z">
+    <groups>
+      <group name="android">
+        <method signature="testandroid.testandroidcase()[pri:0, instance:com.appium.test.testandroid@2d73b676]" name="testandroidcase" class="com.appium.test.testandroid"/>
+      </group> <!-- android -->
+    </groups>
+    <test name="sample" duration-ms="106424" started-at="2014-10-06T19:31:21Z" finished-at="2014-10-06T19:33:07Z">
+      <class name="com.appium.test.testandroid">
+        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.appium.test.testandroid@2d73b676]" name="getDriverInstance" is-config="true" duration-ms="40072" started-at="2014-10-07T01:00:41Z" finished-at="2014-10-07T01:01:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDriverInstance -->
+        <test-method status="PASS" signature="testandroidcase()[pri:0, instance:com.appium.test.testandroid@2d73b676]" name="testandroidcase" duration-ms="106416" started-at="2014-10-07T01:01:21Z" finished-at="2014-10-07T01:03:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testandroidcase -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.appium.test.testandroid@2d73b676]" name="tearDown" is-config="true" duration-ms="15222" started-at="2014-10-07T01:03:07Z" finished-at="2014-10-07T01:03:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.appium.test.testandroid -->
+    </test> <!-- sample -->
+  </suite> <!-- TestSuite-android -->
+</testng-results>

@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="TestSuite-iOS" description="Test Suite file" >
+
+
+<test name="iOS">
+    <groups>
+        <run>
+			<include name="ios" />
+        </run>
+    </groups>
+    <packages>
+            <package name="com.appium.test" />
+    </packages>
+</test>
+
+
+</suite>
