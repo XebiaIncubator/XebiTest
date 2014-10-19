@@ -23,8 +23,12 @@ public class TransactionComplete extends DriverFactory{
 		if(propertyFileName == "android"){
 			doneButton = By.name(prop.returnPropVal("doneButton"));
 			title = By.id(prop.returnPropVal("title"));
-			
 			value = By.id(prop.returnPropVal("value"));
+		}
+		if(propertyFileName == "iOS"){
+			doneButton = By.name(prop.returnPropVal("doneButton"));
+			title = By.xpath(prop.returnPropVal("title"));
+			value = By.xpath(prop.returnPropVal("value"));
 		}
 		//wait for next screen:
 		 waitVar.until(ExpectedConditions.elementToBeClickable(doneButton));
@@ -35,7 +39,12 @@ public class TransactionComplete extends DriverFactory{
 	public void verifyTransactionValue(String Value)
 	{
 		//verify Transaction value:
-		assertEquals(Value, driver.findElement(value).getText());
+		if(propertyFileName == "android"){
+			assertEquals(Value, driver.findElement(value).getText());
+		}
+		else
+			assertEquals("$0.02", driver.findElement(value).getText());
+		
 	}
 	 
 

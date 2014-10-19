@@ -25,10 +25,13 @@ public class PaymentPage extends DriverFactory{
 		if(propertyFileName == "android"){
 			checkoutButton = By.id(prop.returnPropVal("checkoutButton"));
 			title = By.id(prop.returnPropVal("title"));
-			
 			amountText = By.id(prop.returnPropVal("amountText"));
 		}
-		
+		if(propertyFileName == "iOS"){
+			checkoutButton = By.name(prop.returnPropVal("checkoutButton"));
+			title = By.xpath(prop.returnPropVal("title"));
+			amountText = By.xpath(prop.returnPropVal("amountText"));
+		}
 		//wait for next page
 		waitVar.until(ExpectedConditions.presenceOfElementLocated(checkoutButton));
 		//verifying the title of the screen:

@@ -49,8 +49,6 @@
 		<mkdir dir="${buildDir}" />
 		<echo>"Making directory ${outputDir}"</echo> 
 		<mkdir dir="${outputDir}" />
-		<echo>"Making directory ${ScreenShotDir}"</echo> 
-		<mkdir dir="${outputDir}/ScreenShot" />
 		<echo>"Doing build..."</echo> 
 		
 		<javac srcdir="${sourceDir}" destdir="${buildDir}" classpathref="master-classpath" debug="true" deprecation="false" failonerror="true" fork="false" includeantruntime="false"/>

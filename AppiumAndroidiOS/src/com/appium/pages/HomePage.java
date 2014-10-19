@@ -27,7 +27,12 @@ public class HomePage extends DriverFactory{
 			signInButton = By.id(prop.returnPropVal("signInButton"));
 			userName = By.id(prop.returnPropVal("userName"));
 			password = By.id(prop.returnPropVal("password"));
+		}
+		if(propertyFileName == "iOS"){
+			signInButton = By.xpath(prop.returnPropVal("signInButton"));
+			userName = By.xpath(prop.returnPropVal("userName"));
 			done = By.name(prop.returnPropVal("done"));
+			password = By.xpath(prop.returnPropVal("password"));
 		}
 		waitVar.until(ExpectedConditions.elementToBeClickable(signInButton));
 		

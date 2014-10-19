@@ -69,7 +69,7 @@ public class DriverFactory {
 		capabilities
 				.setCapability(
 						"app",
-						"/Users/Apple/Library/Developer/Xcode/DerivedData/PayCloud-fbfzydvnldsmuldjbaozycplnvvo/Build/Products/Debug-iphonesimulator/PayCloud.app");
+						"/Users/Apple/Library/Developer/Xcode/DerivedData/PayCloud-ffksktfojvhzadaztzhtikjpdhdv/Build/Products/Debug-iphonesimulator/PayCloud.app");
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "iOS");
 		capabilities.setCapability("platformVersion", "7.1");
 		capabilities.setCapability("platformName", "iOS");

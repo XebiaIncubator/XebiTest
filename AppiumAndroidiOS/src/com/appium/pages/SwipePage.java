@@ -22,6 +22,10 @@ public class SwipePage extends DriverFactory{
 			payButton = By.id(prop.returnPropVal("payButton"));
 			title = By.id(prop.returnPropVal("title"));
 		}
+		if(propertyFileName == "iOS"){
+			payButton = By.name(prop.returnPropVal("payButton"));
+			title = By.xpath(prop.returnPropVal("title"));
+		}
 		//wait for next screen:
 		 waitVar.until(ExpectedConditions.elementToBeClickable(payButton));
 		 //verify screen title:
