@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="TestSuite-ios" duration-ms="41902" started-at="2014-10-19T07:03:29Z" finished-at="2014-10-19T07:04:11Z">
+  <suite name="TestSuite-ios" duration-ms="56528" started-at="2014-10-21T05:05:06Z" finished-at="2014-10-21T05:06:02Z">
     <groups>
       <group name="android">
         <method signature="testandroidiOS.testandroidcase()[pri:0, instance:com.appium.test.testandroidiOS@754e3d8f]" name="testandroidcase" class="com.appium.test.testandroidiOS"/>
@@ -11,17 +11,17 @@
         <method signature="testandroidiOS.testandroidcase()[pri:0, instance:com.appium.test.testandroidiOS@754e3d8f]" name="testandroidcase" class="com.appium.test.testandroidiOS"/>
       </group> <!-- iOS -->
     </groups>
-    <test name="sample" duration-ms="41902" started-at="2014-10-19T07:03:29Z" finished-at="2014-10-19T07:04:11Z">
+    <test name="sample" duration-ms="56528" started-at="2014-10-21T05:05:06Z" finished-at="2014-10-21T05:06:02Z">
       <class name="com.appium.test.testandroidiOS">
-        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.appium.test.testandroidiOS@754e3d8f]" name="getDriverInstance" is-config="true" duration-ms="24214" started-at="2014-10-19T12:33:05Z" finished-at="2014-10-19T12:33:29Z">
+        <test-method status="PASS" signature="getDriverInstance()[pri:0, instance:com.appium.test.testandroidiOS@754e3d8f]" name="getDriverInstance" is-config="true" duration-ms="3091" started-at="2014-10-21T10:35:03Z" finished-at="2014-10-21T10:35:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriverInstance -->
-        <test-method status="PASS" signature="testandroidcase()[pri:0, instance:com.appium.test.testandroidiOS@754e3d8f]" name="testandroidcase" duration-ms="41894" started-at="2014-10-19T12:33:29Z" finished-at="2014-10-19T12:34:11Z">
+        <test-method status="PASS" signature="testandroidcase()[pri:0, instance:com.appium.test.testandroidiOS@754e3d8f]" name="testandroidcase" duration-ms="56512" started-at="2014-10-21T10:35:06Z" finished-at="2014-10-21T10:36:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testandroidcase -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.appium.test.testandroidiOS@754e3d8f]" name="tearDown" is-config="true" duration-ms="1020" started-at="2014-10-19T12:34:11Z" finished-at="2014-10-19T12:34:12Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.appium.test.testandroidiOS@754e3d8f]" name="tearDown" is-config="true" duration-ms="1104" started-at="2014-10-21T10:36:03Z" finished-at="2014-10-21T10:36:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
